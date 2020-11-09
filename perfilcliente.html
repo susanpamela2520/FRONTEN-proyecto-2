@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="estilos3.css" />
+    <link rel="stylesheet" href="estilos4.css" />
+    <title>Perfil Cliente</title>
+
+    <script>
+        function stickyMenu() {
+            var sticky = document.getElementById('sticky');
+            if (window.pageYOffset > 150) {
+                sticky.classList.add('sticky');
+            } else {
+                sticky.classList.remove('sticky');
+            }
+        }
+        window.onscroll = function () {
+            stickyMenu();
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="parallax">
+        <div class="page-title">Mi Perfil</div>
+    </div>
+
+    <div class="menu" id="sticky">
+        <ul class="menu-ul">
+
+            <a href="catologodejuegosclientes.html" class="a-menu"><li>Catalogo de clientes</li></a>
+            <a href="mibibliotecacliente.html" class="a-menu"><li>Mi Biblioteca</li></a>
+            <a href="perfilcliente.html" class="a-menu"><li>Perfil</li></a>
+
+        </ul>
+        <div class="search-box">
+            <form>
+                <input type="text" placeholder="Search...." name="search" class="search-input">
+                <button type="submite"><i class="fas fa-search"></i></button>
+            </form>
+
+        </div>
+
+
+        <div class="form-wrap" style="overflow: auto;">
+            <form>
+                <h1> Perfil </h1>
+                <input type="text" placeholder="nombre">
+                <input type="text" placeholder="apellido">
+                <input type="text" placeholder="usuario">
+                <input type="text" placeholder="contraseña">
+                <input type="text" placeholder="confirmacion de contraseña">
+                <button type="button" id="aceptar"> aceptar</button>
+                <button type="button" id="cancelar"> cancelar</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
