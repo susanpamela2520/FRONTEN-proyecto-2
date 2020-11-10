@@ -9,6 +9,7 @@ $(document).ready(function () {   //#cuando ya este listo el documento que ejecu
             console.log(data)
             if (data.user) {
                 console.log('usuario encontrado:' + data.user);
+                localStorage.setItem('user',data.user)
                 window.location.href = (data.user.tipo == 0 ? './paginaprincipaladmin.html' : './paginaprincipalclientes.html');
                 
             } else {
