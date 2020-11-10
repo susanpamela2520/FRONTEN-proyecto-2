@@ -1,7 +1,7 @@
 $(document).ready(function () {   //#cuando ya este listo el documento que ejecute todas las acciones
 
-  //const URL = 'https://backend-proyecto2.herokuapp.com/'; //#variable constante que contiene la URL 
-  const URL = 'http://localhost:5000/';
+const URL = 'https://backend-proyecto2.herokuapp.com/'; //#variable constante que contiene la URL 
+  
   
   recuperar('GET',URL+'juego',null,function(data){
     console.log(data);

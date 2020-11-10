@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="estilos3.css" />
-    <link rel="stylesheet" href="estilos4.css" />
+    <link rel ="stylesheet" href="estiloscrud.css"/>
     <title>Perfil Cliente</title>
 
     <script>
@@ -47,20 +46,20 @@
             </form>
         </div>
 
-
-        <div class="form-wrap" style="overflow: auto;">
-            <form>
-                <h1> Perfil </h1>
-                <input type="text" placeholder="nombre">
-                <input type="text" placeholder="apellido">
-                <input type="text" placeholder="usuario">
-                <input type="text" placeholder="contraseña">
-                <input type="text" placeholder="confirmacion de contraseña">
-                <button type="button" id="aceptar"> aceptar</button>
-                <button type="button" id="cancelar"> cancelar</button>
-            </form>
-
-        </div>
+        <h2> Perfil Cliente </h2>
+    
+        <label id="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" value=""><br>
+        <label id="year">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" value=""><br>
+        <label id="precio">Usuario:</label><br>
+        <input type="text" id="user" name="user" value=""><br>
+        <label id="cat1">Contraseña:</label><br>
+        <input type="text" id="contra" name="contra" value=""><br>
+        <label id="cat2">Confirmacion de contraseña:</label><br>
+        <input type="text" id="confircontra" name="confircontra" value=""><br>
+      
+        <button id="modificar"> Modificar </button>
 
     </div>
 
