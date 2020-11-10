@@ -18,6 +18,8 @@ $(document).ready(function () {   //#cuando ya este listo el documento que ejecu
         })
     });
 
+    
+
 
 
     function recuperar(method, url, data, funcion) {  //#metodo (get o post) url es la del servidor data son los objetos jason funcion lo que hace cuando retorne la data
