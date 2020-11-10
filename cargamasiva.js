@@ -1,41 +1,39 @@
-$(document).ready(function(){   //#cuando ya este listo el documento que ejecute todas las acciones
+$(document).ready(function () {   //#cuando ya este listo el documento que ejecute todas las acciones
 
-    const URL='https://backend-proyecto2.herokuapp.com/'; //#variable constante que contiene la URL 
+    //const URL = 'https://backend-proyecto2.herokuapp.com/'; //#variable constante que contiene la URL 
+    const URL = 'http://localhost:5000/';
 
-$('#subir').click(function(){
+    $('#subir').click(function (){
 
-    var file = $('#archivo')[0].files
-    console.log(file)
+        var file = $('#archivo').get(0).files[0]
+        console.log(file)
 
-    var reader = new FileReader(); 
-    reader.readAsText(file);
-
-    reader.onload = function (e) {
-        // Cuando éste evento se dispara, los datos están ya disponibles.
-        // Se trata de copiarlos a una área <div> en la página.
-        console.log(e.target.result)
-       // output.textContent = e.target.result;
+        var reader = new FileReader;
+        reader.readAsText(file);
+        var t = null
+        reader.onload = function (e) {
+            let a = {data:reader.result.replace('\r','')};
+            console.log(a)
+            if(a!=null)
+                $.ajax({
+                    type: 'POST',
+                    url: URL+'carga',
+                    data: JSON.stringify(a),
+                    'contentType': 'application/json',
+                    success: function (data) {
+                        console.log(data);
+                    }
+                });
         };
-
-
-        document.getElementById('file')
-        .addEventListener('change', leerArchivo, false);
-
-        })
+        
+    })
 
 
 
 
 
-    function recuperar (method, url, data, funcion){  //#metodo (get o post) url es la del servidor data son los objetos jason funcion lo que hace cuando retorne la data
-        $.ajax({
-            type:method,
-            url:url,
-            data:data,
-            success:function(data){
-                funcion(data);
-            }
-        });
+    function recuperar(method, url, data, funcion) {  //#metodo (get o post) url es la del servidor data son los objetos jason funcion lo que hace cuando retorne la data
+        
     }
 
 
