@@ -5,7 +5,7 @@ $(document).ready(function(){   //#cuando ya este listo el documento que ejecute
 $('#recuperar').click(function(){
 var user = $('#user').val();
 
-recuperar('GET',URL+'/recuperacion?user='+user,null,function(data){
+recuperar('GET',URL+'/recuperar?user='+user,null,function(data){
     console.log(data)
     if(data.ok){
     alert('el password es: ' +data.pass);

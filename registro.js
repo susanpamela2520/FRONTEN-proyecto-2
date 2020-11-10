@@ -15,7 +15,7 @@ $(document).ready(function () {   //#cuando ya este listo el documento que ejecu
         }
 
         var body = {
-            user: user, nombre: name, apellido: lastname, pswd: password
+            user: user, nombre: name, apellido: lastname, pswd: password, tipo:1
         }
 
         recuperar('POST', URL + '/registro', body, function (data) {
